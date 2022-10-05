@@ -1,25 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.kiseong.closet">
-    <uses-permission android:name="android.permission.INTERNET"  />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.Closet">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+    android:layout_centerHorizontal="true"
 
-</manifest>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Btn_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다음" />
+
+        <Button
+            android:id="@+id/Btn_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이전" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Btn_select"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="선택" />
+
+        <Button
+            android:id="@+id/Btn_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="정리" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="93dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/Btn_LEDON"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="0dp"
+            android:text="LED ON" />
+
+        <Button
+            android:id="@+id/Btn_LEDOFF"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:minHeight="48dp"
+            android:text="LED OFF" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+
