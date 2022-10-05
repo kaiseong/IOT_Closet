@@ -54,20 +54,6 @@ public class MainActivity extends AppCompatActivity {
         protected void onStart(){
         super.onStart();
 
-/*
-        temperatureRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String text = dataSnapshot.getValue(String.class);
-                txtTemp.setText(text); // 데이터 베이스에서 받아와서 받는 코드
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError){
-
-            }
-
-        });
-*/
 
 
         findViewById(R.id.btnLockOpen).setOnClickListener(new View.OnClickListener(){
@@ -141,12 +127,7 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        //결국엔 되는게 loadDataWithBaseURL이였다.... 아마 주소랑 호출 방식? 의 차이였는듯 하다.
-        // baseURL - 말그대로 사이트 주소
-        // data - 사이트의 path 경로
-        // mimeType - 가져오는 경로의 유형
-        // encoding - 말그대로 인코딩 형식
-        //historyUrl - 몰?루
+     
 
         webView.loadDataWithBaseURL("http://192.168.143.1:8080/stream","<html><head></head><body>"+
                         "<img src='/stream/video.mjpeg' alt='image'></body></html>",
